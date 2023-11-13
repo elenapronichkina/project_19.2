@@ -28,3 +28,4 @@ def index_product(request):
     return render(request, 'catalog/index_product.html', context)
 
 
+
