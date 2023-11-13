@@ -16,12 +16,15 @@ def index_contacts(request):
     return render(request, 'catalog/index_contacts.html')
 
 
-def index_products(request):
-    return render(request, 'catalog/index_products.html')
+def base_products(request):
+    return render(request, 'catalog/base_products.html')
 
-def product(request):
+
+def index_product(request):
     context = {
         'object_list': Category.objects.all(),
-        'title': 'Каталог - наши продукты'
+        'title': 'КАТАЛОГ'
     }
-    return render(request, 'catalog/product.html', context)
+    return render(request, 'catalog/index_product.html', context)
+
+
