@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div class="card mb-4 box-shadow">
+       <div class="card-header">
+           <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
+       </div>
+       <div class="card-body">
+           <h1 class="card-title pricing-card-title">RUR {{ object.price }}</h1>
+           <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+               <img src="{{ object.avatar | mymedia }}" class="img-fluid rounder-start">
+               <li>{{ object.picture | mymedia }}</li>
+               <li> {{ object.description }} </li>
+               <li> {{ object.data_of_create}} </li>
+               <li> {{ object.date_of_change}} </li>
+           </ul>
+       </div>
+   </div>
+</div>
+</body>
+</html>
