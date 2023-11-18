@@ -29,10 +29,10 @@ def index_product(request):
 
 
 def product(request, pk):
-    product = Product.objects.get(pk=pk)
-    context = {
-        'object': product,
-        'title': f'продукт категории {product.name}'
+    category = Category.objects.get(pk=pk)
+    data = {
+        'object_list': Product.objects.filter(category2=pk),
+        'title': f'продукт категории {category.name}'
     }
-    return render(request, 'catalog/product.html', context)
+    return render(request, 'catalog/product.html', data)
 
