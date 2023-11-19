@@ -3,16 +3,26 @@
 {% load my_tags %}
 
 {% block content %}
-
-{% for object in object_list %}
-    <div class="card mb-4 box-shadow">
-           <div class="card-header">
-               <h1 class="my-0 font-weight-normal">{{ object.name }}</h1>
-           </div>
-           <div class="card-body">
-               <h4 class="card-title pricing-card-title">RUR {{ object.description }}</h4>
-           </div>
-       </div>
-{% endfor %}
-
+    <div class="row">
+        {% for object in object_list %}
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h1 class="my-0 font-weight-normal">{{ object.name }}</h1>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title pricing-card-title">RUR {{ object.description }}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{object.name}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="{% url 'catalog:product' object.pk %}" type="button"
+                               class="btn btn-sm btn-outline-secondary">Подробнее</a>
+                        </div>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

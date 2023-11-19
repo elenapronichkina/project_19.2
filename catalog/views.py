@@ -32,7 +32,7 @@ def product(request, pk):
     category = Category.objects.get(pk=pk)
     data = {
         'object_list': Product.objects.filter(category2=pk),
-        'title': f'продукт категории {category.name}'
+        'title': f'продукты категории {category.name}',
     }
     return render(request, 'catalog/product.html', data)
 
