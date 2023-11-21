@@ -6,10 +6,10 @@
         {% for object in object_list %}
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
+                    <h1 class="my-0 font-weight-normal">{{ object.name }}</h1>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{ object.description|slice:100 }}</h1>
+                    <h4 class="card-title pricing-card-title">{{ object.description|slice:100 }}</h4>
                 </div>
             </div>
         {% endfor %}
