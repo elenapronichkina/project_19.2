@@ -3,8 +3,13 @@
 {% load my_tags %}
 
 {% block content %}
+    <div class="row">
         {% for object in object_list %}
             <div class="card mb-4 box-shadow">
+                <img class="card-img-top"
+                     src="/media/{{ object.picture }}"#}
+                     src="{{ object.picture|mymedia }}"
+                     alt="Card image cap"
                 <div class="card-header">
                     <h1 class="my-0 font-weight-normal">{{ object.name }}</h1>
                 </div>
