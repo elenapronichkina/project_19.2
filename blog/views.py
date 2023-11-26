@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.views.generic import CreateView
 
-# Create your views here.
+from blog.models import Post
+
+
+class PostCreateView(CreateView):
+    model = Post
+    fields = ('title', 'body')
